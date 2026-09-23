@@ -5942,3 +5942,63 @@ body.v-light .footer .logo-footer img.logo-light {
     scroll-behavior: auto;
   }
 }
+
+
+/* Woodstar PPT follow-up: project facts at left, project copy at right. */
+.portfolio-project-details {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(40px, 7vw, 110px);
+  align-items: start;
+}
+
+.portfolio-project-facts {
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin: 0;
+}
+
+.portfolio-project-facts > div + div {
+  margin-top: 22px;
+}
+
+.portfolio-project-story {
+  max-width: none;
+  margin: 0;
+}
+
+.woodstar-client-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 42px;
+  margin: 0;
+  padding: 8px 0 8px 22px;
+  color: #fff;
+  font-size: clamp(16px, 1.4vw, 21px);
+  line-height: 1.35;
+}
+
+.woodstar-client-list li {
+  padding-left: 5px;
+}
+
+@media (max-width: 767px) {
+  .portfolio-project-details {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .portfolio-project-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .portfolio-project-facts > div + div {
+    margin-top: 0;
+  }
+
+  .woodstar-client-list {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+}
