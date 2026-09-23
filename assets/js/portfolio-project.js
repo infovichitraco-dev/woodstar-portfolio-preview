@@ -182,7 +182,7 @@
         '<div class="wrapper">' +
             '<section class="portfolio-project-info section-padding">' +
                 '<div class="container">' +
-                    ''<div class="portfolio-project-details">' +
+                    '<div class="portfolio-project-details">' +
                     '<dl class="portfolio-project-facts">' +
                         '<div><dt>Project Area</dt><dd>' + project.area + '</dd></div>' +
                         '<div><dt>Location</dt><dd>' + project.location + '</dd></div>' +
