@@ -182,13 +182,15 @@
         '<div class="wrapper">' +
             '<section class="portfolio-project-info section-padding">' +
                 '<div class="container">' +
+                    ''<div class="portfolio-project-details">' +
                     '<dl class="portfolio-project-facts">' +
-                        '<div><dt>Date</dt><dd>' + project.date + '</dd></div>' +
                         '<div><dt>Project Area</dt><dd>' + project.area + '</dd></div>' +
                         '<div><dt>Location</dt><dd>' + project.location + '</dd></div>' +
                         '<div><dt>Project By</dt><dd>' + project.projectBy + '</dd></div>' +
+                        '<div><dt>Date</dt><dd>' + project.date + '</dd></div>' +
                     '</dl>' +
                     '<div class="portfolio-project-story">' + story + '</div>' +
+                '</div>' +
                 '</div>' +
             '</section>' +
             '<section class="portfolio-project-gallery section-padding pt-0" aria-labelledby="project-gallery-title">' +
