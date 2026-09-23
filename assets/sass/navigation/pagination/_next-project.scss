@@ -1,0 +1,33 @@
+
+.next-project {
+  position: relative;
+  height: 100vh;
+
+  .bg-container {
+    width: 40%;
+    height: calc(100% - 225px);
+    left: 30%;
+    bottom: 0;
+  }
+
+  .intro-project{
+    position: relative;
+  }
+}
+
+
+.hero-title{
+  position: relative;
+
+  .title:not(.title-fill){
+      color: transparent;
+      -webkit-text-stroke: 1px $heading-color;
+  }
+  .title-fill{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        clip-path: polygon(0% 0%, 0% 100%, 18% 100%, 43% 0, 84% 0, 62% 100%, 4% 100%, 18% 100%, 100% 100%, 100% 0%);
+  }
+
+}

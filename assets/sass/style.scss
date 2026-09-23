@@ -1,0 +1,164 @@
+/*-----------------------------------------------------------
+
+  Template Name: Droow - Ajax Portfolio Showcase HTML Template
+  Template URI: http://theme.dsngrid.com/droow
+  Description: Droow Ajax Portfolio Showcase HTML Template
+  Author: design_grid
+  Author URI: https://themeforest.net/user/design_grid
+  Version: 1.0.0
+
+-------------------------------------------------------------*/
+/*-----------------------------------------------------------
+
+    1.  Variables
+    2.  Mixins
+      - Mixins Master
+      - Utilities
+    3.  Normalize
+    4.  Helpers
+    5. Typography
+      - Copy
+	  - Headings
+	6. Core
+    7. Navigation
+      - Links
+      - Menus
+	  - Next & Previous
+    8. Content
+      - pages
+      - Comments
+      - Archives
+      - Footer
+    9.Forms
+      - Button
+      - Fields
+    10.Blocks
+    11.Media
+      - captions
+    12.Version Light
+
+-------------------------------------------------------------*/
+:root, :root .v-light , , :root .v-light-head{
+  --bg-color: #f9f9f9;
+  --assistant-color: #efefef;
+  --theme-color: #b19777;
+  --font-color: #0009;
+  --heading-color: #000;
+  --border-color: #2828281a;
+  --smooth-color: #141414;
+  --reverse-color: #141414;
+  --reverse-heading-color: #fff;
+  --bg-btn: #f6fafd;
+  --bg-btn-assistant: #e5eaeacc;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  body .v-light-head-mobile-sm {
+    --bg-color: #f9f9f9;
+    --assistant-color: #efefef;
+    --theme-color: #b19777;
+    --font-color: #0009;
+    --heading-color: #000;
+    --border-color: #2828281a;
+    --smooth-color: #141414;
+    --reverse-color: #141414;
+    --reverse-heading-color: #fff;
+    --bg-btn: #f6fafd;
+    --bg-btn-assistant: #e5eaeacc;
+  }
+}
+
+:root .v-dark, :root .v-dark-head {
+  --bg-color: #181818;
+  --assistant-color: #212121;
+  --theme-color: #b19777;
+  --font-color: rgba(255, 255, 255, 0.69);
+  --heading-color: #fff;
+  --border-color: #ffffff1a;
+  --smooth-color: #f9f9f9;
+  --reverse-color: #f9f9f9;
+  --reverse-heading-color: #000;
+  --bg-btn: #0a0909;
+  --bg-btn-assistant: #101010;
+
+}
+
+:root .consulting-theme {
+
+  &, .v-dark, .v-dark-head, .v-light, .v-light-head {
+    --theme-color: #ccbd99;
+  }
+
+}
+
+@media only screen and (max-width: 991px) {
+  .v-dark-head-mobile {
+    --bg-color: #000;
+    --assistant-color: #101010;
+    --theme-color: #14bfb5;
+    --font-color: #bbb;
+    --heading-color: #fff;
+    --border-color: rgba(255, 255, 255, 0.07);
+    --smooth-color: #f9f9f9;
+    --reverse-color: #f9f9f9;
+    --reverse-heading-color: #000;
+    color: var(--font-color);
+  }
+}
+
+
+
+:root {
+  --body-font: 'Poppins', sans-serif;
+  --heading-font: 'Poppins', sans-serif;
+  --font-code: Menlo, monaco, Consolas, Lucida Console, monospace;
+  --font-pre: "Courier 10 Pitch", Courier, monospace;
+
+  --font-size-base: 15px;
+  --font-size-h1: 40px;
+  --font-size-h2: 35px;
+  --font-size-h3: 30px;
+  --font-size-h4: 25px;
+  --font-size-h5: 22px;
+  --font-size-h6: 16px;
+  --menu-size: 12px;
+  --line-height-base: 1.3;
+  --line-height-content: 1.6;
+  --font-weight-heading: 600;
+  --font-weight-body: 500;
+
+  //--> structure
+  --margin-padding: 120px;
+  --margin-padding-mobile: 80px;
+  --box-padding: 80px;
+  --box-padding-mobile: 50px;
+  --smooth-width: 4px;
+
+  --color-overlay: #000;
+
+}
+
+
+// elements
+@import "mixins/_mixins-master.scss";
+@import "mixins/_utilities.scss";
+@import "variables-site/_variables-site.scss";
+//@import "_normalize.scss";
+//@import "typography/_typography.scss";
+// Content
+//@import "_global.scss";
+@import "_core.scss";
+@import "forms/_forms.scss";
+@import "navigation/_navigation.scss";
+@import "blocks/blocks";
+@import "site/_site.scss";
+@import "media/_dsn-captions.scss";
+
+
+.box-seat .pro-text {
+  bottom: -120px;
+}
+
+

@@ -1,0 +1,223 @@
+/* -------------------------------------------------------
+                   09 - portfolio
+-------------------------------------------------------- */
+.filtering-t {
+  z-index: 2;
+
+  .filtering-wrap {
+    .filtering {
+      .filter-title {
+        margin: 0 0 12px;
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+
+      button {
+        color: $heading-color;
+        width: auto;
+        margin-right: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        &:not(:last-of-type) {
+          &:after {
+            content: "/";
+            position: absolute;
+            margin: 0 2px;
+            color: $heading-color;
+          }
+        }
+
+        &.active {
+          color: $theme-color;
+        }
+
+        @include media_575 {
+          padding-top: 0;
+          padding-bottom: 10px;
+          margin: 0 10px 10px 0;
+        }
+      }
+    }
+  }
+}
+
+.work-inners {
+  .dsn-isotope.dsn-masonry {
+    .img-next-box {
+      position: relative;
+      max-height: 80vh;
+    }
+
+    &:not(.dsn-show-content) {
+      .item-info {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    &.dsn-show-content .item-info {
+      background-color: $assistant-color;
+    }
+  }
+}
+
+.work {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+  counter-reset: workcounter;
+
+  &.dsn-col:not(.dsn-col-space) {
+    .work-inner {
+      .work-item {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    text-align: center;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    a:hover {
+      .work__item-textinner {
+        color: transparent;
+        -webkit-text-stroke: 1.5px $body-color;
+      }
+    }
+
+    &::before {
+      counter-increment: workcounter;
+      content: counters(workcounter, ".", decimal-leading-zero);
+      position: absolute;
+      left: 0;
+      top: 20%;
+      height: 60%;
+      padding-left: 15px;
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      border-left: 1px solid $reverse-color;
+      opacity: 0;
+      transform: translateX(-15px);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.work-inner {
+  position: relative;
+  counter-reset: workcounter;
+  display: flex;
+  flex-wrap: wrap;
+
+  &.work-one-page {
+    .work-item {
+      width: 33.333%;
+
+      @include media_991 {
+        width: 50%;
+      }
+
+      @include media_768 {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.work-section {
+  .work-item {
+    &:nth-of-type(n+3) {
+      margin-top: 80px;
+    }
+
+    .img-next-box {
+      max-height: 80vh;
+    }
+
+    .box-img {
+      height: 500px;
+    }
+  }
+}
+
+.work-gallery {
+  .work-item {
+    .img-next-box {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        transition: all 0.5s;
+      }
+
+      img {
+        transition: opacity 3s cubic-bezier(0.19, 1, 0.22, 1) 0ms, transform 2s cubic-bezier(0.19, 1, 0.22, 1) 0ms,
+          -webkit-transform 2s cubic-bezier(0.19, 1, 0.22, 1) 0ms;
+      }
+    }
+
+    .item-info {
+      .metas {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.5s, opacity cubic-bezier(0.4, 0, 0.2, 1) 1s;
+      }
+
+      h4 {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: transform cubic-bezier(0.4, 0, 0.2, 1) 0.5s, opacity cubic-bezier(0.4, 0, 0.2, 1) 1s;
+      }
+    }
+
+    &:hover {
+      .img-next-box {
+        &::before {
+          opacity: 1;
+        }
+
+        img {
+          transform: scale(1.2);
+        }
+      }
+
+      .item-info {
+        .metas {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+
+        h4 {
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+    }
+  }
+}

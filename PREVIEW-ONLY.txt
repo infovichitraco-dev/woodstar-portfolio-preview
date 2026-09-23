@@ -1,3 +1,7 @@
 WOODSTAR PROJECTS - PRIVATE REVIEW BUILD
 
-Temporary public preview only. Delete this repository after client review.
+This package is intended only for temporary staging and client review.
+It is not the production deployment package.
+
+Roche Bobois metadata is provisional and incomplete.
+Goregaon was removed from this preview at the client's direction because the supplied images duplicate the Oberoi Esquire image set.
